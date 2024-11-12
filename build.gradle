@@ -1,0 +1,57 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "gradle.plugin.com.github.jengelman.gradle.plugins:shadow:7.0.0"
+    }
+}
+
+plugins {
+    id "java"
+    id "idea"
+    id "eclipse"
+}
+
+sourceCompatibility = "17"
+targetCompatibility = "17"
+version = "1.0.0"
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url "https://packages.confluent.io/maven"
+    }
+}
+
+apply plugin: "com.github.johnrengelman.shadow"
+
+dependencies {
+    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '3.5.3'
+    //    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '3.5.3'
+//    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '7.5.3-ccs'
+    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '7.5.3-ce'
+    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '2.0.9'
+    implementation group: 'redis.clients', name: 'jedis', version: '4.4.4'
+    implementation group: 'com.hazelcast', name: 'hazelcast', version: '5.3.6'
+    implementation group: 'io.confluent', name: 'kafka-avro-serializer', version: '7.5.3'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
+    implementation group: 'io.confluent', name: 'monitoring-interceptors', version: '7.5.3'
+    implementation 'mysql:mysql-connector-java:8.0.33' // 드라이버 버전은 필요에 맞게 조정하세요
+
+}
+
+jar {
+    manifest {
+        attributes(
+                "Class-Path": configurations.compileClasspath.collect { it.getName() }.join(" "),
+                "Main-Class": "com.timegate.eos.EOSConsumerWithHazelcast"
+        )
+    }
+}
+
+shadowJar {
+    archiveBaseName = "ksd-eosconsumer"
+    archiveClassifier = ''
+}
