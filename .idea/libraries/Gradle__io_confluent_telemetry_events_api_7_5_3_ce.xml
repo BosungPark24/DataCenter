@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.confluent:telemetry-events-api:7.5.3-ce" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.confluent" artifactId="telemetry-events-api" version="7.5.3-ce" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.confluent/telemetry-events-api/7.5.3-ce/f7cf2ef5524886dc9112ccbc8e8c4594eb6471fb/telemetry-events-api-7.5.3-ce.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

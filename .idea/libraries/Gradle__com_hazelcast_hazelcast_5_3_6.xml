@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.hazelcast:hazelcast:5.3.6" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.hazelcast" artifactId="hazelcast" version="5.3.6" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.hazelcast/hazelcast/5.3.6/e1c1c498b51761364bff1c7fc527321971a3530b/hazelcast-5.3.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

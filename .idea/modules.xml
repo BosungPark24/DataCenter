@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ConfluentKafka.iml" filepath="$PROJECT_DIR$/ConfluentKafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ConfluentKafka.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ConfluentKafka.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ConfluentKafka.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ConfluentKafka.test.iml" />
+    </modules>
+  </component>
+</project>

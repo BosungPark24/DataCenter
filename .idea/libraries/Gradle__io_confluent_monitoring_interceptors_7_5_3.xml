@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.confluent:monitoring-interceptors:7.5.3" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.confluent" artifactId="monitoring-interceptors" version="7.5.3" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.confluent/monitoring-interceptors/7.5.3/8fbcd98b5ef99cbb52471604e680038a022977a2/monitoring-interceptors-7.5.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
