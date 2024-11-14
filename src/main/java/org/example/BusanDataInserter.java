@@ -18,7 +18,7 @@ public class BusanDataInserter {
 
             // 테이블 생성 (한 번만 실행하면 됨)
             String createTableQuery = """
-                CREATE TABLE IF NOT EXISTS busan16 (
+                CREATE TABLE IF NOT EXISTS busan17 (
                     data_id INT PRIMARY KEY,
                     timestamp VARCHAR(50),
                     temperature FLOAT,
@@ -52,7 +52,7 @@ public class BusanDataInserter {
             String heatSensorTrigger = "No";
             String sprinklerStatus = "Active";
 
-            String insertQuery = "INSERT INTO busan16 (data_id, timestamp, temperature, humidity, oxygen_level, airflow, power_usage, ups_temp, battery_health, voltage_variation, smoke_level, heat_sensor_trigger, sprinkler_status, level) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO busan17 (data_id, timestamp, temperature, humidity, oxygen_level, airflow, power_usage, ups_temp, battery_health, voltage_variation, smoke_level, heat_sensor_trigger, sprinkler_status, level) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement pstmt = conn.prepareStatement(insertQuery);
 
             for (int i = 1; i <= 3600; i++) {
