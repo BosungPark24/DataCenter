@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0c5a4dd-f49c-4b8c-ab4d-f3ef43c0d160" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BusanAvgDataConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PangyoAvgDataConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/example/BusanDataInserter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/example/BusanDataInserter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/example/PangyoDataInserter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/example/PangyoDataInserter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BusanDataInserter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BusanDataInserter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PangyoDataInserter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PangyoDataInserter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +82,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BusanAvgDataConsumer">
+  <component name="RunManager" selected="Application.PangyoDataInserter">
     <configuration name="BusanAvgDataConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.BusanAvgDataConsumer" />
       <module name="ConfluentKafka.main" />
@@ -108,19 +98,6 @@
     </configuration>
     <configuration name="BusanDataInserter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.BusanDataInserter" />
-      <module name="ConfluentKafka.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConsumerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.ConsumerTest" />
       <module name="ConfluentKafka.main" />
       <extension name="coverage">
         <pattern>
@@ -160,11 +137,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BusanAvgDataConsumer" />
-        <item itemvalue="Application.PangyoAvgDataConsumer" />
         <item itemvalue="Application.PangyoDataInserter" />
+        <item itemvalue="Application.PangyoAvgDataConsumer" />
         <item itemvalue="Application.BusanDataInserter" />
-        <item itemvalue="Application.ConsumerTest" />
+        <item itemvalue="Application.BusanAvgDataConsumer" />
       </list>
     </recent_temporary>
   </component>
