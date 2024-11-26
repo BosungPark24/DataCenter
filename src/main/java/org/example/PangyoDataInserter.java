@@ -25,8 +25,8 @@ public class PangyoDataInserter {
 
             // 테이블 생성 (한 번만 실행하면 됨)
             String createTableQuery = """
-                CREATE TABLE IF NOT EXISTS pangyo17 (
-                    data_id INT PRIMARY KEY,
+                CREATE TABLE IF NOT EXISTS pangyo19 (
+                    data_id INT AUTO_INCREMENT PRIMARY KEY,
                     timestamp VARCHAR(50),
                     temperature FLOAT,
                     humidity FLOAT,
@@ -59,7 +59,7 @@ public class PangyoDataInserter {
             String heatSensorTrigger = "No";
             String sprinklerStatus = "Active";
 
-            String insertQuery = "INSERT INTO pangyo17 (data_id, timestamp, temperature, humidity, oxygen_level, airflow, power_usage, ups_temp, battery_health, voltage_variation, smoke_level, heat_sensor_trigger, sprinkler_status, level) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO pangyo19 (timestamp, temperature, humidity, oxygen_level, airflow, power_usage, ups_temp, battery_health, voltage_variation, smoke_level, heat_sensor_trigger, sprinkler_status, level) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement pstmt = conn.prepareStatement(insertQuery);
 
             for (int i = 1; i <= 3600; i++) {
@@ -109,23 +109,23 @@ public class PangyoDataInserter {
                 String level = classifyLevel(temperature, humidity, powerUsage, upsTemp, smokeLevel);
 
                 // 데이터 삽입
-                pstmt.setInt(1, i);
-                pstmt.setString(2, timestamp.toString());
-                pstmt.setFloat(3, temperature);
-                pstmt.setFloat(4, humidity);
-                pstmt.setFloat(5, oxygenLevel);
-                pstmt.setInt(6, airflow);
-                pstmt.setFloat(7, powerUsage);
-                pstmt.setFloat(8, upsTemp);
-                pstmt.setString(9, batteryHealth);
-                pstmt.setString(10, voltageVariation);
-                pstmt.setFloat(11, smokeLevel);
-                pstmt.setString(12, heatSensorTrigger);
-                pstmt.setString(13, sprinklerStatus);
-                pstmt.setString(14, level);
+                //pstmt.setInt(1, i);
+                pstmt.setString(1, timestamp.toString());
+                pstmt.setFloat(2, temperature);
+                pstmt.setFloat(3, humidity);
+                pstmt.setFloat(4, oxygenLevel);
+                pstmt.setInt(5, airflow);
+                pstmt.setFloat(6, powerUsage);
+                pstmt.setFloat(7, upsTemp);
+                pstmt.setString(8, batteryHealth);
+                pstmt.setString(9, voltageVariation);
+                pstmt.setFloat(10, smokeLevel);
+                pstmt.setString(11, heatSensorTrigger);
+                pstmt.setString(12, sprinklerStatus);
+                pstmt.setString(13, level);
                 pstmt.executeUpdate();
 
-                System.out.println("Inserted data_id " + i);
+                System.out.println("Inserted data at timestamp " + timestamp);
 
                 // 타임스탬프 갱신 및 딜레이
                 timestamp = new Timestamp(timestamp.getTime() + 500);
