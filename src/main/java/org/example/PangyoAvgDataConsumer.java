@@ -63,7 +63,7 @@ public class PangyoAvgDataConsumer {
     // JSON 데이터에서 평균 온도 추출
     private static double parseAvgTemperature(String jsonValue) {
         try {
-            String tempString = jsonValue.split("\"BUSAN_AVG_UPS_TEMP\":")[1].split(",")[0];
+            String tempString = jsonValue.split("\"PANGYO_AVG_UPS_TEMP\":")[1].split(",")[0];
             return Double.parseDouble(tempString);
         } catch (Exception e) {
             e.printStackTrace();
